@@ -38,7 +38,11 @@ class Settings(BaseSettings):
     embedding_model: str = Field(default="text-embedding-3-small")
     
     class Config:
+        # Docker Compose passes env vars directly, but also check for .env file
         env_file = ".env"
+        env_file_encoding = "utf-8"
+        # Allow reading from environment variables (which Docker Compose sets)
+        case_sensitive = False
 
 
 settings = Settings()
