@@ -2,6 +2,34 @@
 
 A curriculum-aware AI study companion that provides structured, pedagogical answers with verifiable sources. Built for self-directed university students, researchers, and professors.
 
+## 🚀 Quick Build Commands
+
+### Frontend (Client) Build
+```bash
+# Development
+cd frontend && npm install && npm start
+
+# Production Build
+cd frontend && npm install && npm run build
+
+# Clean Rebuild
+cd frontend && rm -rf node_modules build && npm install && npm run build
+```
+
+### Docker Build
+```bash
+# Build all services
+docker compose build
+
+# Rebuild and restart
+docker compose up --build -d
+
+# Clean rebuild (removes old images)
+docker compose down && docker compose build --no-cache && docker compose up -d
+```
+
+See [BUILD.md](./BUILD.md) for detailed build instructions.
+
 ## 🏗️ System Architecture
 
 ```
