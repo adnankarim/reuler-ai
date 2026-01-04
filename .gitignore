@@ -329,6 +329,13 @@ chroma-data/
 vector-db/
 *.chroma
 *.faiss
+ai-service/data/chroma/
+ai-service/data/embedding_cache/
+**/chroma/
+**/embedding_cache/
+*.db-shm
+*.db-wal
+*.db
 
 # ============ Cache ============
 .cache/
