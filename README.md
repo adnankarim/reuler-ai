@@ -2,7 +2,39 @@
 
 A curriculum-aware AI study companion that provides structured, pedagogical answers with verifiable sources. Built for self-directed university students, researchers, and professors.
 
-## 🚀 Quick Build Commands
+## 🚀 Quick Start with Docker
+
+### Prerequisites
+- Docker Desktop installed and running
+- OpenAI API key
+
+### Build and Run
+```bash
+# 1. Create .env file with your OpenAI API key
+echo "OPENAI_API_KEY=sk-your-key-here" > .env
+
+# 2. Build and start all services
+docker compose up --build -d
+
+# 3. Access the application
+# Frontend: http://localhost:3000
+# Backend API: http://localhost:5000
+# AI Service Docs: http://localhost:8000/docs
+```
+
+### View Logs
+```bash
+docker compose logs -f
+```
+
+### Stop Services
+```bash
+docker compose down
+```
+
+**📖 For detailed Docker setup, see [DOCKER_SETUP.md](./DOCKER_SETUP.md)**
+
+## 🛠️ Local Development Build
 
 ### Frontend (Client) Build
 ```bash
@@ -16,7 +48,7 @@ cd frontend && npm install && npm run build
 cd frontend && rm -rf node_modules build && npm install && npm run build
 ```
 
-### Docker Build
+### Docker Build Commands
 ```bash
 # Build all services
 docker compose build
